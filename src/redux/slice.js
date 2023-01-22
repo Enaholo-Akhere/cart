@@ -26,7 +26,7 @@ export const counterSlice = createSlice({
       }
     },
     addToCart: (state, { payload }) => {
-      if (payload.quantity === 0) {
+      if (payload.quantity < 1) {
         toast.warning('cannot add empty item to cart');
       } else{
         state.cart = [...state.cart, payload]
