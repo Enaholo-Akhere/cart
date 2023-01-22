@@ -9,7 +9,15 @@ const TopBar = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'flex-end', m: 3, p: 2 }}>
       <Box sx={{ flexGrow: -1 }}>
-        <Typography sx={{ bgcolor: 'red', color: 'white', borderRadius: 10 }}>{cart.length}</Typography>
+        <Typography
+          sx={{
+            bgcolor: cart.length < 1 ? 'red' : 'green',
+            color: 'white',
+            borderRadius: 10,
+          }}
+        >
+          {cart.length}
+        </Typography>
         <AddShoppingCartIcon />
       </Box>
     </Box>
