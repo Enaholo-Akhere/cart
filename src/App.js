@@ -21,7 +21,7 @@ function App() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [item, setItem] = useState({});
-  const { testData, cart } = useSelector((state) => state.counter);
+  const { testData } = useSelector((state) => state.counter);
   const handleViewItem = (data) => {
     setItem(data);
     setOpen(true);
