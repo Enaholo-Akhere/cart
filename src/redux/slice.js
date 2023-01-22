@@ -19,8 +19,8 @@ export const counterSlice = createSlice({
       }
     },
     decrementQuantity: (state, { payload }) => {
-      if (state.testData[payload].quantity < 1) {
-        toast.warning('Cannot purchase items less than 0');
+      if (state.testData[payload].quantity < 2 ) {
+        toast.warning('Cannot purchase items less than 1');
       } else {
         state.testData[payload].quantity = state.testData[payload].quantity - 1;
       }
